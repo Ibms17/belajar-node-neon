@@ -1,0 +1,20 @@
+datasource db {
+  provider = "postgresql"
+}
+
+// 🟢 TARUH DI SINI (Di bawah datasource db)
+generator client {
+  provider = "prisma-client-js"
+  output   = "../node_modules/.prisma/client" 
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  nama      String
+  email     String   @unique
+  password  String
+  refreshToken String?
+  createdAt DateTime @default(now()) @map("dibuat_pada")
+
+  @@map("users")
+}
