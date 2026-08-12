@@ -12,7 +12,7 @@ const app = express();
 const PORT = 3000;
 
 // 🟢 2. UBAH BAGIAN INI: Menghubungkan Prisma ke Neon menggunakan Driver Adapter agar aman
-const databasePool = new Pool({ connectionString: "postgresql://neondb_owner:npg_b6Y0aNTvmRsx@ep-polished-dream-azeu5ljm.c-3.ap-southeast-1.aws.neon.tech/neondb?sslmode=require"});
+const databasePool = new Pool({ connectionString: "postgresql://neondb_owner:npg_npg_rS4vk3iIOlFa@ep-polished-dream-azeu5ljm.c-3.ap-southeast-1.aws.neon.tech/neondb?sslmode=require"});
 const databaseAdapter = new PrismaPg(databasePool);
 const prisma = new PrismaClient({ adapter: databaseAdapter }); 
 
